@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*common global code*/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*common global code for custom scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    border-radius: 8px;
+  }

@@ -1,0 +1,63 @@
+/*=== aside nav custom css === */
+
+aside{
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;    
+    width: 300px;
+    transition: width 0.5s;
+    height: 100vh;
+}
+
+aside ul .nav-link{
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 9999px 0px 0px 9999px;
+}
+
+aside ul .nav-item{
+   margin-top: 2px;
+   margin-bottom: 2px;
+}
+
+aside.hide-aside-navbar{
+    width: 0px !important;
+}
+
+aside ul .nav-link.active, aside ul .nav-link:hover{
+    background-color: white;
+    color:#0d6efd !important;
+    border-radius: 9999px 0px 0px 9999px;
+    box-shadow:0 .125rem .25rem rgba(0,0,0,.075);
+    position: relative;    
+    z-index: 9999;
+    transition: none;
+}
+
+/*rounded shape of nav link*/
+aside ul .nav-link.active::before, aside ul .nav-link:hover::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0px #fff;
+    z-index: 99;  
+}
+
+aside ul .nav-link.nav-link.active::after, aside ul .nav-link:hover::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0px #fff;
+    z-index: 99;    
+}

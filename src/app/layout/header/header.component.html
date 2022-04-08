@@ -1,0 +1,57 @@
+<!-- ==== set header structure of angular dashboard application === -->
+<header> 
+  <nav class="navbar shadow-sm bg-light border border-bottom py-3 w-100">
+      <div class="container-fluid">         
+        <ul class="nav ms-auto">          
+          <!--search li--> 
+          <li class="nav-item position-relative d-flex mx-1">
+          <div *ngIf="searchInputToggle">  
+              <form><input type="email" class="form-control shadow-sm" placeholder="Search"></form>
+          </div>    
+            <div class="nav-link p-2 text-dark custom-dropdown rounded" (click)="searchToggle()">
+              <i class="fa-solid fa-magnifying-glass px-2 fa-lg"></i>          
+          </div>                    
+          </li>
+          <!--notification li-->
+          <li class="nav-item position-relative mx-1">
+            <div class="nav-link p-2 text-dark position-relative custom-dropdown rounded" (click)="notificationDropdown()">
+              <i class="fa-solid fa-bell px-2 fa-lg"></i>
+              <i class="fa-solid fa-circle text-danger shadow-sm fa-circle-icon fa-lg me-2 fa-notification-icon"></i>                
+            </div>
+              <div class="custom-dropdown-menu shadow-sm rounded bg-white mt-3 border position-absolute" *ngIf="notificationDropdownMenu">
+              <ul class="list-unstyled">
+                <li *ngFor="let item of userNotification">
+                <a class="nav-link text-dark border-bottom px-4" [routerLink]="(item.url)">
+                  <span> <i [class]="(item.notificationIcon)" class="fa-solid fa-circle text-danger shadow-sm fa-circle-icon fa-notification-list me-3"></i></span>
+                  <span><span class="fw-bold text-primary small header-notification-title">{{item.notificationName}}</span> {{item.notificationMessage}}</span>
+                  <div class="small px-4"><span>{{"(" + item.notificationTime + ")"}}</span></div>
+                </a>
+              </li>                               
+            </ul>              
+          </div>
+          </li>  
+          <!--user li--> 
+          <li class="nav-item position-relative mx-1">  
+            <div class="nav-link p-2 text-dark position-relative custom-dropdown rounded" (click)="userDropdown()">
+                <i class="fa-solid fa-user px-2 fa-lg"></i>                  
+            </div>
+              <div class="custom-dropdown-menu shadow-sm rounded bg-white mt-3 border position-absolute" *ngIf="userDropdownMenu">
+              <ul class="list-unstyled">
+                <li *ngFor="let item of userDropdownTitle">
+                <a class="nav-link text-dark px-4" [routerLink]="(item.url)">
+                  <span><i [class]="(item.dropdownTitleIcon)" class="me-3"></i></span>
+                  <span>{{item.dropdownTitle}}</span>
+                </a>
+              </li>            
+            </ul>
+          </div>
+          </li>    
+          <!--toggle li-->
+          <li class="nav-item mx-1">
+              <div class="nav-link p-2 text-dark rounded" (click)="asideToggleBtn()"><i class="fa-solid fa-bars px-2 fa-lg"></i></div>
+          </li>        
+        </ul>
+      </div>
+    </nav>    
+</header>
+

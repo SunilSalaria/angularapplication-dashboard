@@ -1,0 +1,18 @@
+<!--=== layout structure of angular dashboard page === -->
+
+<section class="layout-wrapper d-flex w-100">  
+        <!--aside-->
+        <app-aside></app-aside>    
+         <!--main-->
+         <main class="w-100 d-flex flex-column"  [ngClass]="mainWidthToggle() === false ? 'hide-full-main' : 'show-full-main'">  
+        <!--header-->
+        <app-header class="sticky-top w-100"></app-header>    
+        <section class="p-3 h-100">
+        <router-outlet></router-outlet>    
+        </section>   
+        <!--footer-->
+        <app-footer class="mt-auto"></app-footer>   
+        </main>             
+</section>
+ 
+

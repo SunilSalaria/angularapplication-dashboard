@@ -1,0 +1,13 @@
+/*toggle main section css*/
+
+main.hide-full-main{
+    margin-left: 300px;
+    transition: margin 0.5s;
+    min-height: 100vh;
+}
+
+main.show-full-main{
+    margin-left: 0px;
+    transition: margin 0.5s;
+    min-height: 100vh;
+}

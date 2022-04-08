@@ -1,0 +1,15 @@
+<aside class="bg-primary" [ngClass]="asideNavbar() === false ? 'show-aside-navbar' : 'hide-aside-navbar'">
+  <nav class="navbar py-3 d-flex justify-content-center mb-5">       
+      <a class="navbar-brand text-white m-0" routerLink="/dashboard" routerLinkActive="active"><h4 class="mb-0 fw-bold"><i class="fa-brands fa-angular"></i>pplication</h4></a>       
+  </nav>
+  
+  <ul class="nav flex-column ps-3">
+      <li class="nav-item" *ngFor="let item of navlinkTitle">
+        <a class="nav-link text-white py-3" [routerLink]="(item.url)" routerLinkActive="active">
+          <span><i [class]="(item.aiseTitleIcon)" class="ms-2 me-3"></i></span>  
+          <span>{{item.asideTitle}}</span>
+        </a>
+      </li>            
+    </ul>
+</aside>
+
