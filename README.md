@@ -1,4 +1,4 @@
-# AngularDashboard
+# AngularDashboard (https://github.com/SunilSalaria/angularapplication-dashboard.git)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
@@ -46,8 +46,3 @@ FOR SET LOCAL DB API IN ANGULAR:-
 
 
 =============================================================================
-
-# TODO LIST:--
-
-- complete header db changes with URL. 
-- complete aside db changes with URL.
