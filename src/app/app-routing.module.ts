@@ -7,6 +7,8 @@ import { ProductComponent } from './pages/product/product.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { OfferComponent } from './pages/offer/offer.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { AddComponent } from './crud/add/add.component';
+import { EditComponent } from './crud/edit/edit.component';
 
 const routes: Routes = [
 
@@ -31,6 +33,13 @@ const routes: Routes = [
   {
     path:'page-not-found',  component:PageNotFoundComponent
   },
+  {
+    path:'edit/:id',  component:EditComponent
+  },
+  {
+    path:'add',  component:AddComponent
+  },
+  
   {
     path:'', //use empty route for set default page property
     pathMatch:'full',

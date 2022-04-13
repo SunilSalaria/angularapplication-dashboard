@@ -14,6 +14,9 @@ import { StockComponent } from './pages/stock/stock.component';
 import { OfferComponent } from './pages/offer/offer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { AddComponent } from './crud/add/add.component';
+import { EditComponent } from './crud/edit/edit.component';
+import { ReactiveFormsModule, FormControl, FormGroup} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,13 +30,16 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     ProductComponent,
     StockComponent,
     OfferComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

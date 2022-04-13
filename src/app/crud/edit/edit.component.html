@@ -1,0 +1,35 @@
+<section>
+    <div class="row d-flex justify-content-center">
+        <div class="col-7 text-center mb-5 mt-3">
+            <h2 class="fw-bold">Update Record</h2>
+            <p>In this section is related to <span class="text-primary fw-bold">update records</span> in datatable for new user.</p>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-5 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                   <div class="text-primary text-uppercase fw-bold py-3">Create new Record</div>
+                </div>
+                <div class="card-body">                
+                    <form [formGroup]="editRecord" (ngSubmit)="updateRecord()">                       
+                        <div class="mb-3">
+                          <label for="exampleInputName" class="form-label">Name</label>
+                          <input formControlName="name" type="text" class="form-control form-control-lg shadow-sm rounded-pill" id="exampleInputName">
+                        </div>  
+                        <div class="mb-3">
+                            <label for="exampleInputuserName" class="form-label">User Name</label>
+                            <input formControlName="username" type="text" class="form-control form-control-lg shadow-sm rounded-pill" id="exampleInputuserName">
+                        </div>                        
+                        <div class="mb-3">
+                            <label for="exampleInputEmail" class="form-label">Email</label>
+                            <input formControlName="email" type="email" class="form-control form-control-lg shadow-sm rounded-pill" id="exampleInputEmail" aria-describedby="emailHelp">                           
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 shadow-sm text-decoration-none rounded-pill w-100 btn-block fw-bold">Update Record</button>
+                      </form>            
+                </div>               
+            </div>
+        </div>       
+    </div>
+</section>
