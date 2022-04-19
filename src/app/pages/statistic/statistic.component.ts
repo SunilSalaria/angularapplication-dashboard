@@ -27,7 +27,7 @@ export class StatisticComponent implements OnInit {
   deleteRecord(id:any){     
        this.crudservice.deleteUserRecord(id).subscribe(data => {
            this.getUserData = this.getUserData.filter((dr: { id: any; }) => dr.id !== id);
-           this.toasterservice.showError("Record Delete Successfully !!", "Delete Record");
+           this.toasterservice.showError("Record Deleted Successfully !!", "Delete Record");
        });
   }
 

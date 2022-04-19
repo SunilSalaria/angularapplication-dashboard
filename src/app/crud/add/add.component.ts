@@ -4,7 +4,8 @@ import { FormGroup } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { CrudService } from 'src/app/services/crud.service';
 import { Validators } from '@angular/forms';
-import { Router } from "@angular/router"
+import { Router } from "@angular/router";
+import { ToasterService } from 'src/app/services/toaster.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Router } from "@angular/router"
 })
 export class AddComponent implements OnInit {
 
-  constructor(private curdservice:CrudService, private router: Router) { }
+  constructor(private curdservice:CrudService, private router: Router, private toasterservice:ToasterService) { }
 
   ngOnInit(): void {
 
@@ -36,6 +37,10 @@ export class AddComponent implements OnInit {
     //redirect to datatable page
     this.router.navigate(['/statistic']);
    
+    setTimeout(() => {
+      this.toasterservice.showSuccess("New record added Successfully!", "Added new Record");
+    }, 1500);
+
     this.curdservice.getUserDetail().subscribe(data =>{      
           data;
     });

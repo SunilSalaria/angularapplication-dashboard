@@ -3,7 +3,8 @@ import { FormGroup } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { CrudService } from 'src/app/services/crud.service';
 import { ActivatedRoute } from "@angular/router";
-import { Router } from "@angular/router"
+import { Router } from "@angular/router";
+import { ToasterService } from 'src/app/services/toaster.service';
 
 @Component({
   selector: 'app-edit',
@@ -21,7 +22,7 @@ export class EditComponent implements OnInit {
   
   //get id form URL for get user data based on id
   getUrlId:any;   
-  constructor(private crudservice:CrudService, private activatedroute:ActivatedRoute, private router: Router) { 
+  constructor(private crudservice:CrudService, private activatedroute:ActivatedRoute, private router: Router, private toasterservice:ToasterService ) { 
   }
 
   ngOnInit(): void {
@@ -42,7 +43,10 @@ export class EditComponent implements OnInit {
   //create new record we can use getrawvalue() instead of .value which is inbuild function of reactive form
   updateRecord(){    
     this.crudservice.updateUserRecord(this.getUrlId, this.editRecord.value).subscribe(data => {
-      this.router.navigate(['/statistic']);        
+      this.router.navigate(['/statistic']);    
+      setTimeout(() =>{
+        this.toasterservice.showSuccess("Record edited Successfully!", "Edited Record");
+      }, 1500);    
     });  
   }
 
