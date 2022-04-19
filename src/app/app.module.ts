@@ -17,6 +17,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { AddComponent } from './crud/add/add.component';
 import { EditComponent } from './crud/edit/edit.component';
 import { ReactiveFormsModule, FormControl, FormGroup} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,11 @@ import { ReactiveFormsModule, FormControl, FormGroup} from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     RouterModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      preventDuplicates:true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

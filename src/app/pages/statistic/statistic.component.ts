@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/services/crud.service';
+import { ToasterService } from 'src/app/services/toaster.service';
 
 @Component({
   selector: 'app-statistic',
@@ -12,7 +13,7 @@ export class StatisticComponent implements OnInit {
   //get user data form service
   getUserData:any;
 
-  constructor(private crudservice:CrudService) { 
+  constructor(private crudservice:CrudService, private toasterservice : ToasterService) { 
     this.crudservice.getUserDetail().subscribe(data=>{
       this.getUserData = data;
     });
@@ -23,8 +24,11 @@ export class StatisticComponent implements OnInit {
   }
 
   //delete record method
-  deleteRecord(){
-       alert("delete button work successfully");
+  deleteRecord(id:any){     
+       this.crudservice.deleteUserRecord(id).subscribe(data => {
+           this.getUserData = this.getUserData.filter((dr: { id: any; }) => dr.id !== id);
+           this.toasterservice.showError("Record Delete Successfully !!", "Delete Record");
+       });
   }
 
 }

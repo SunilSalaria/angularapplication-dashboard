@@ -22,4 +22,18 @@ export class CrudService {
     return this.http.post(this.api_url + "user", createUser);
   }
 
+  //update user detail service
+  viewUserRecord(id:any){
+     return this.http.get(this.api_url + "user/" + id);
+  }
+
+  //update user detail service
+  updateUserRecord(id:any, userObj:any){
+    return this.http.put(this.api_url + "user/" + id , userObj);
+ }
+
+  //delete user record
+  deleteUserRecord(id:any){
+    return this.http.delete(this.api_url + "user/" + id);
+ }
 }

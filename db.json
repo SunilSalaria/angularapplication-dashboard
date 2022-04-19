@@ -1,18 +1,6 @@
 {
   "user": [
     {
-      "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz"
-    },
-    {
-      "id": 2,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv"
-    },
-    {
       "id": 3,
       "name": "Clementine Bauch",
       "username": "Samantha",
@@ -61,46 +49,16 @@
       "email": "Rey.Padberg@karina.biz"
     },
     {
-      "name": "rajeev",
-      "username": "rajeev Singh",
-      "email": "rajeev@mail.com",
+      "name": "raj",
+      "username": "raj Singh",
+      "email": "raj@mail.com",
       "id": 11
     },
     {
-      "name": "Aman",
-      "username": "Aman Katal ",
-      "email": "amankatal@gmail.com",
+      "name": "mukesh",
+      "username": "mukesh salaria ",
+      "email": "mukesh@gmail.com",
       "id": 12
-    },
-    {
-      "name": "Chaman",
-      "username": "Chaman Chamba",
-      "email": "Chaman@gmail.com",
-      "id": 13
-    },
-    {
-      "name": "Ragav",
-      "username": "Ragav Singh",
-      "email": "Ragav@gmail.com",
-      "id": 14
-    },
-    {
-      "name": "AmanDeep",
-      "username": "AmanDeep Singh",
-      "email": "Amandeep@mail.com",
-      "id": 15
-    },
-    {
-      "name": "gurdeep",
-      "username": "gurdeep singh",
-      "email": "gurdeep@gmail.com",
-      "id": 16
-    },
-    {
-      "name": "Vicky",
-      "username": "Vicky Salaria",
-      "email": "Vicky@gmail.com",
-      "id": 17
     }
   ],
   "headerUserDropdown": [

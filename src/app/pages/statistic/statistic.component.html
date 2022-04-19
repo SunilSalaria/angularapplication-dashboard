@@ -34,7 +34,7 @@
                             <td>{{item.email}}</td>
                             <td>                               
                             <div [routerLink]="['/edit', item.id]" class="btn btn-success shadow-sm rounded btn-sm me-2"><i class="fa-solid fa-pen-to-square me-1"></i> Edit</div> 
-                            <div (click)="deleteRecord()" class="btn btn-danger shadow-sm rounded btn-sm"><i class="fa-solid fa-trash me-1"></i> Delete</div>                               
+                            <div (click)="deleteRecord(item.id)" class="btn btn-danger shadow-sm rounded btn-sm"><i class="fa-solid fa-trash me-1"></i> Delete</div>                               
                             </td>
                           </tr>                       
                         

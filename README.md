@@ -31,8 +31,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 FOR SET LOCAL DB API IN ANGULAR:-
 -----------------------------------------------
-# GO TO https://www.npmjs.com/package/json-server URL and run "npm i json-server" command in project root folder.
-# GO TO https://www.npmjs.com/package/concurrently URL and run "npm i concurrently" command in project root folder.
+# GO TO https://www.npmjs.com/package/json-server URL and run "npm i json-server" command in project root folder. (npm i json-server)
+# GO TO https://www.npmjs.com/package/concurrently URL and run "npm i concurrently" command in project root folder. (npm i concurrently)
 # GO TO "D:\Workspace\Angular\Angular-local-api\angular-dashboard\package.json" this file path in angular project and add line number 10,11 (below test)
 
       - "json-server": "json-server --watch db.json --port 3000",
@@ -46,3 +46,8 @@ FOR SET LOCAL DB API IN ANGULAR:-
 
 
 =============================================================================
+
+# for toast in angular
+- https://www.tutsmake.com/angular-13-toastr-notifications-example/
+# for login password
+- https://stackoverflow.com/questions/45300614/redirect-to-another-page-angular-2
