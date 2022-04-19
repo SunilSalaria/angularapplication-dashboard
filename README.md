@@ -51,3 +51,5 @@ FOR SET LOCAL DB API IN ANGULAR:-
 - https://www.tutsmake.com/angular-13-toastr-notifications-example/
 # for login password
 - https://stackoverflow.com/questions/45300614/redirect-to-another-page-angular-2
+# for sweet alert
+- https://www.itsolutionstuff.com/post/angular-9-8-sweetalert2-sample-example-tutorialexample.html

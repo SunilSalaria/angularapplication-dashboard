@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/services/crud.service';
 import { ToasterService } from 'src/app/services/toaster.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-statistic',
   templateUrl: './statistic.component.html',
@@ -32,3 +32,4 @@ export class StatisticComponent implements OnInit {
   }
 
 }
+
