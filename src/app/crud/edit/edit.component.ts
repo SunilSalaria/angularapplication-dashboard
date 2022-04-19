@@ -45,8 +45,8 @@ export class EditComponent implements OnInit {
     this.crudservice.updateUserRecord(this.getUrlId, this.editRecord.value).subscribe(data => {
       this.router.navigate(['/statistic']);    
       setTimeout(() =>{
-        this.toasterservice.showSuccess("Record edited Successfully!", "Edited Record");
-      }, 1500);    
+        this.toasterservice.showSuccess("Record edit Successfully!", "Edit Record");
+      }, 1000);    
     });  
   }
 

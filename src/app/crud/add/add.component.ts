@@ -38,8 +38,8 @@ export class AddComponent implements OnInit {
     this.router.navigate(['/statistic']);
    
     setTimeout(() => {
-      this.toasterservice.showSuccess("New record added Successfully!", "Added new Record");
-    }, 1500);
+      this.toasterservice.showSuccess("New record added Successfully!", "Add new Record");
+    }, 1000);
 
     this.curdservice.getUserDetail().subscribe(data =>{      
           data;
