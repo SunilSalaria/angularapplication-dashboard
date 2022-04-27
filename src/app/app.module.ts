@@ -12,6 +12,7 @@ import { StatisticComponent } from './pages/statistic/statistic.component';
 import { ProductComponent } from './pages/product/product.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { OfferComponent } from './pages/offer/offer.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import {HttpClientModule} from '@angular/common/http';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AddComponent } from './crud/add/add.component';
@@ -44,6 +45,7 @@ import { ToastrModule } from 'ngx-toastr';
     RouterModule, 
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    NgxPaginationModule,
     ToastrModule.forRoot({
       preventDuplicates:true
     })

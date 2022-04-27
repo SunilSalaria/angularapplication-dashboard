@@ -53,3 +53,8 @@ FOR SET LOCAL DB API IN ANGULAR:-
 - https://stackoverflow.com/questions/45300614/redirect-to-another-page-angular-2
 # for sweet alert
 - https://www.itsolutionstuff.com/post/angular-9-8-sweetalert2-sample-example-tutorialexample.html
+
+# for pagination
+- https://www.positronx.io/angular-server-side-pagination-with-ngx-pagination-example/ (server side pagination)
+- https://codingspoint.com/how-to-make-server-side-pagination-in-angular-13/ (client side pagination)
+- https://www.itsolutionstuff.com/post/angular-13-server-side-pagination-exampleexample.html (client side pagination)
