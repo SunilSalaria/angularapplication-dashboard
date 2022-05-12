@@ -1,27 +1,44 @@
-<p>dashboard works!</p>
-
-<!-- toaster-->
-<h1>Angular 13 Toastr Notifications Example - Tutsmake.com</h1>
-   
-<button (click)="showToasterSuccess()">
-    Success Toaster
-</button>
-   
-<button (click)="showToasterError()">
-    Error Toaster
-</button>
-   
-<button (click)="showToasterInfo()">
-    Info Toaster
-</button>
-   
-<button (click)="showToasterWarning()">
-    Warning Toaster
-</button>
+<!-- angular toaster-->
+<section>
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 mb-3 mt-3">
+            <h2 class="fw-bold">Angular Toaster</h2>
+            <p>In this section is related to <span class="text-primary fw-bold">angular toaster</span> which is user friendly.</p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 mb-4">
+          <div class="card shadow-sm">
+              <div class="card-body">
+                <button class="btn btn-success shadow-md rounded text-white me-2" (click)="showToasterSuccess()">Success Toaster</button>   
+                <button class="btn btn-danger shadow-md rounded text-white me-2" (click)="showToasterError()">Error Toaster</button>   
+                <button class="btn btn-info shadow-md rounded text-white me-2" (click)="showToasterInfo()">Info Toaster</button>   
+                <button class="btn btn-warning shadow-md rounded text-white me-2" (click)="showToasterWarning()">Warning Toaster</button>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+<!-- /angular toaster-->
 
 <!--swal sweet alert-->
-<h1>Angular Sweetalert2 Examples - ItSolutionstuff.com</h1>
-  
-<button (click)="simpleAlert()">Simple Alert</button>
-<button (click)="alertWithSuccess()">Alert with Success</button>
-<button (click)="confirmBox()">Confirm Box</button>
+<section>
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 mb-3 mt-3">
+            <h2 class="fw-bold">Angular Sweetalert 2</h2>
+            <p>In this section is related to <span class="text-primary fw-bold">angular sweetalert 2</span> which is user friendly.</p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 mb-4">
+          <div class="card shadow-sm">
+              <div class="card-body">
+                <button class="btn btn-primary shadow-md rounded text-white me-2" (click)="simpleAlert()">Simple Alert</button>
+                <button class="btn btn-success shadow-md rounded text-white me-2" (click)="alertWithSuccess()">Success Alert</button>
+                <button class="btn btn-danger shadow-md rounded text-white me-2" (click)="confirmBox()">Confirm Box</button>               
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+<!--/swal sweet alert-->

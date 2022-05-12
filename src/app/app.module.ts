@@ -12,14 +12,19 @@ import { StatisticComponent } from './pages/statistic/statistic.component';
 import { ProductComponent } from './pages/product/product.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { OfferComponent } from './pages/offer/offer.component';
-import { NgxPaginationModule } from 'ngx-pagination';
 import {HttpClientModule} from '@angular/common/http';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AddComponent } from './crud/add/add.component';
 import { EditComponent } from './crud/edit/edit.component';
 import { ReactiveFormsModule, FormControl, FormGroup} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//fot toaster
 import { ToastrModule } from 'ngx-toastr';
+//for pagination
+import { NgxPaginationModule } from 'ngx-pagination';
+import { LoginComponent } from './account/login/login.component';
+import { RegisterComponent } from './account/register/register.component';
+import { ForgotPasswordComponent } from './account/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -36,7 +41,10 @@ import { ToastrModule } from 'ngx-toastr';
     OfferComponent,
     PageNotFoundComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -44,11 +52,11 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     RouterModule, 
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    NgxPaginationModule,
+    BrowserAnimationsModule,    
     ToastrModule.forRoot({
       preventDuplicates:true
-    })
+    }),
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

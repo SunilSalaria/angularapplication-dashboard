@@ -9,9 +9,24 @@ import { OfferComponent } from './pages/offer/offer.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AddComponent } from './crud/add/add.component';
 import { EditComponent } from './crud/edit/edit.component';
+import { LoginComponent } from './account/login/login.component';
+import { RegisterComponent } from './account/register/register.component';
+import { ForgotPasswordComponent } from './account/forgot-password/forgot-password.component';
 
 const routes: Routes = [
 
+  //account
+  {
+    path:'login',   component:LoginComponent
+  },
+  {
+    path:'login',   component:RegisterComponent
+  },
+  {
+    path:'forgot-password',   component:ForgotPasswordComponent
+  },
+
+  //pages
   {
     path:'dashboard',   component:DashboardComponent
   },
@@ -39,11 +54,10 @@ const routes: Routes = [
   {
     path:'add',  component:AddComponent
   },
-  
   {
     path:'', //use empty route for set default page property
     pathMatch:'full',
-    redirectTo: 'dashboard'
+    redirectTo: 'login'
    },
    //when user enter wrong url it will redirect set as default page
    {

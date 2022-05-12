@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/services/crud.service';
 import { ToasterService } from 'src/app/services/toaster.service';
 import Swal from 'sweetalert2';
+import { NgxPaginationModule } from 'ngx-pagination';
 @Component({
   selector: 'app-statistic',
   templateUrl: './statistic.component.html',
@@ -13,7 +14,7 @@ export class StatisticComponent implements OnInit {
   //get user data form service
   getUserData:any;
 
-  constructor(private crudservice:CrudService, private toasterservice : ToasterService) { 
+  constructor(private crudservice:CrudService, private toasterservice : ToasterService, ngxpaginationmodule: NgxPaginationModule) { 
     this.crudservice.getUserDetail().subscribe(data=>{
       this.getUserData = data;
     });
@@ -62,5 +63,22 @@ export class StatisticComponent implements OnInit {
     })
   }
 
+  //===pagination in table ===//
+  POSTS: any;
+  page: number = 1;
+  count: number = 0;
+  tableSize: number = 5;
+  tableSizes: any = [3, 6, 9, 12];
+
+
+  onTableDataChange(event: any) {
+    this.page = event;
+    this.getUserData;
+  }
+  onTableSizeChange(event: any): void {
+    this.tableSize = event.target.value;
+    this.page = 1;
+    this.getUserData;
+  }
 }
 

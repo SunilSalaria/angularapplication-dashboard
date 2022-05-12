@@ -1,0 +1,38 @@
+<section>
+    <div class="row d-flex justify-content-center">
+        <div class="col-7 text-center mb-5 mt-3">
+            <h2 class="fw-bold">Welcome to Application!!</h2>
+            <p>First 30 days absolutely <span class="text-primary fw-bold">free</span> for any plan, no credit card required to get started.</p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-4">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <div class="text-primary fw-bold py-2">Login</div>
+                </div>
+                <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+                <div class="mb-3">
+                  <label for="userName" class="form-label">User name</label>
+                  <input type="email" class="form-control form-control-lg shadow-sm rounded" formControlName="username">                  
+                </div>  
+                <div class="mb-3">
+                    <label for="emailAddress" class="form-label">Email address</label>
+                    <input type="email" class="form-control form-control-lg shadow-sm rounded" formControlName="email">                  
+                  </div>             
+                <div class="mb-3 text-end">
+                <a href="#">Forgot credential</a>
+                </div>
+                <div class="mb-3">
+                <button type="submit" class="btn btn-primary py-3 shadow-md text-decoration-none rounded w-100 btn-block fw-bold">Submit</button>
+            </div>
+                <div class="text-center">
+                    <a href="#">I'm new user</a>
+                    </div>  
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
